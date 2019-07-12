@@ -1,9 +1,9 @@
 const db = require('../db')
 
-//model is a fuction from moogoose
-const db_channel = db.model('channels', {
-	name: String,
+//model is a fuction from mongoose
+const db_hashtag = db.model('hastags', {
+	name: String
 }
 
 )
-module.exports = db_channel
+module.exports = db_hashtag
