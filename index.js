@@ -16,12 +16,12 @@ app.use(cors())
 
 //message
 
-// app.post('/api/messages', require('./controllers/post_message'))
+app.post('/api/post_message', require('./controllers/post_message'))
 app.get('/api/messages', require('./controllers/get_messages'))
 
 // //channels
 // app.get('/api/hashtags', require('./controllers/get_hashtag'))
-app.post('/api/hashtags', require('./controllers/post_hashtag'))
+app.post('/api/post_hashtag', require('./controllers/post_hashtag'))
 
 // //users controllers , post_user, signup is just form create in html
 // app.get('/api/users', require('./controllers/get_users'))
