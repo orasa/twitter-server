@@ -18,10 +18,10 @@ const db_message = db.model('message', {
 		require: [true, 'Message Body is required']
 
 	},
-	channel: {
+	hashtag: {
 		type: mongoose.Schema.Types.ObjectId,
-		require: [true, 'Channel is required'],
-		ref: 'channel' //
+		require: [true, 'hashtag is required'],
+		ref: 'hashtag' //
 	}
 }
 )
