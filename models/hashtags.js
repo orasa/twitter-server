@@ -1,8 +1,8 @@
 const db = require('../db')
 
 //model is a fuction from mongoose
-const db_hashtag = db.model('hastags', {
-	author: String
+const db_hashtag = db.model('hashtag', {
+	name: String
 }
 
 )

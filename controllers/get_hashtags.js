@@ -5,7 +5,7 @@ module.exports = (req, res) => {
 	console.log('Hello');
 
 	db_channel.find({}).then((data)=> {
-		console.log('data From channel',	data)
+		console.log('data From hashtag',	data)
 	 	res.send(data)
 	}).catch((err) => {
 		res.send(err)
