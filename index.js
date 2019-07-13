@@ -17,10 +17,10 @@ app.use(cors())
 //message
 
 app.post('/api/post_message', require('./controllers/post_message'))
-app.get('/api/messages', require('./controllers/get_messages'))
+app.get('/api/get_messages', require('./controllers/get_messages'))
 
-// //channels
-// app.get('/api/hashtags', require('./controllers/get_hashtag'))
+// //hastags
+app.get('/api/get_hashtags', require('./controllers/get_hashtags'))
 app.post('/api/post_hashtag', require('./controllers/post_hashtag'))
 
 // //users controllers , post_user, signup is just form create in html

@@ -1,5 +1,5 @@
 
-const db_channel = require('../models/channels')
+const db_channel = require('../models/hashtags')
 
 module.exports = (req, res) => {
 	console.log('Hello');
@@ -10,7 +10,7 @@ module.exports = (req, res) => {
 	}).catch((err) => {
 		res.send(err)
 	 })
- }
+}
 
 
 	//sort
