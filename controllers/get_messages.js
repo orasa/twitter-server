@@ -9,6 +9,9 @@ module.exports = (req, res) => {
 		path: 'hashtag',
 		select: 'name'
 
+	}).populate({
+		path: 'author',
+		select: 'name email'
 	}).then((data) => {
 
 		res.send(data)
