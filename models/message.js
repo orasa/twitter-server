@@ -22,7 +22,8 @@ const db_message = db.model('message', {
 		type: mongoose.Schema.Types.ObjectId,
 		require: [true, 'hashtag is required'],
 		ref: 'hashtag' //
-	}
+	},
+	
 }
 )
 

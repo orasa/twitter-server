@@ -1,10 +1,10 @@
 
-const db_channel = require('../models/hashtags')
+const db_hashtag = require('../models/hashtags')
 
 module.exports = (req, res) => {
 	console.log('Hello');
 
-	db_channel.find({}).then((data)=> {
+	db_hashtag.find({}).sort('date').populate('hashtag').then((data)=> {
 		console.log('data From hashtag',	data)
 	 	res.send(data)
 	}).catch((err) => {
@@ -13,9 +13,4 @@ module.exports = (req, res) => {
 }
 
 
-	//sort
-	// db_channel.find({}).sort('date').populate('channel').then((data)=> {
-	// 	res.send(data)
-	// }).catch((err) => {
-	// 	res.send(err)
-	// })
+	

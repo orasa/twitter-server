@@ -2,18 +2,17 @@
 const db_message = require('../models/message')
 
 module.exports = (req, res) => {
-	console.log('messses', res);
-	//populate will join collection messages and hashtags from db
-
-	db_message.find({}).populate({
+	let q = {}
+	if (req.query && req.query.hashtag) {
+		q.hashtag = req.query.hashtag
+	}
+	db_message.find(q).sort('-date').populate({
 		path: 'hashtag',
 		select: 'name'
-
 	}).populate({
 		path: 'author',
-		select: 'name email'
+		select: 'UserName email'
 	}).then((data) => {
-
 		res.send(data)
 	}).catch((err) => {
 		res.send(err)
